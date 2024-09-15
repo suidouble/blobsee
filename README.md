@@ -9,7 +9,7 @@ Walrus Sites File Manager. Breaking the Ice contest entry.
 - AES Encryption to protect your files and media
 - Breaking the ice
 - Everything is the blob!
-- Demo video: 
+- [Demo video](https://www.youtube.com/watch?v=l9jxesE7JzI) 
 
 Still a bit buggy. Please feel free to reload the page if it lost some events or get lost in memory heap. 
 Promise to fix everything if you vote for me, guys.
