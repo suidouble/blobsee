@@ -1,0 +1,57 @@
+{
+  "name": "blobsee",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "tap -j=1 ./test/*.test.js",
+    "coverage": "tap -j=1 ./test/*.test.js",
+    "serve": "node app.js run",
+    "dev": "node app.js dev",
+    "build": "node app.js build",
+    "start": "node app.js run",
+    "heroku-postbuild": "node app.js build"
+  },
+  "author": "Jeka Kiselyov <jeka911@gmail.com> (https://github.com/jeka-kiselyov)",
+  "engines": {
+    "node": "18.16.0"
+  },
+  "dependencies": {
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.27.0"
+  },
+  "devDependencies": {
+    "@mysten/bcs": "^1.0.4",
+    "@quasar/extras": "^1.16.11",
+    "@quasar/vite-plugin": "^1.7.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "crypto-js": "^4.2.0",
+    "pinia": "^2.1.7",
+    "quasar": "^2.16.4",
+    "simple-statistics": "^7.8.3",
+    "suidouble": "1.9.0",
+    "tap": "^16.3.10",
+    "vite": "^5.2.12",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2",
+    "vue-sui": "1.9.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
