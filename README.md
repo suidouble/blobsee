@@ -14,6 +14,19 @@ Walrus Sites File Manager. Breaking the Ice contest entry.
 Still a bit buggy. Please feel free to reload the page if it lost some events or get lost in memory heap. 
 Promise to fix everything if you vote for me, guys.
 
+### Encryption/Decription
+
+Performing fully on the client side, does `AES( data, PBKDF2( randomIV + wallet.signMessage(stringWithFileSize) ))` as encryptor/decryptor. May be easily adjusted into password-based or any other key derivation function (including smart contracts integration).
+
+### Caching
+
+Stores blobs in the browser cache in the same way Walrus Portal does. Keeping aggregator for video urls to enable `content-range` headers and video streaming.
+@todo: implement service worker with streaming support?
+
+### UI
+
+Vue
+
 ### points of interest
 
 - [walrus object classes](https://github.com/suidouble/blobsee/tree/main/shared/classes/walrus)
