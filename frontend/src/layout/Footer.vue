@@ -8,7 +8,9 @@
 
         <div class="fit row no-wrap justify-center items-start content-start">
 
-          <q-btn flat type="a" href="https://github.com/suidouble/suidouble-bot-score" label="GitHub" />
+          <q-btn flat type="a" href="https://github.com/suidouble/blobsee" label="GitHub" />
+          <q-btn flat type="a" href="https://info.breakingtheice.sui.io/" label="Breaking the Ice" />
+          <q-btn flat type="a" href="https://walrus.site/" label="Walrus" />
 
         </div>
 
