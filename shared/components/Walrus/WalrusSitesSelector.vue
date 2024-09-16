@@ -33,7 +33,7 @@
         </q-item>
 
 
-        <q-item v-for="site in yours" :key="site.id" class="q-mb-sm" clickable v-ripple :to="'/site/'+site.id">
+        <q-item v-for="site in yours" :key="site.id" class="q-mb-sm" clickable v-ripple :to="'/?site='+site.id">
             <q-item-section avatar>
                 <q-avatar color="primary" text-color="white">
                     Q
@@ -49,7 +49,7 @@
         <q-separator />
 
         <q-item-label header>Sample Sites</q-item-label>
-        <q-item v-for="site in samples" :key="site.id" class="q-mb-sm" clickable v-ripple :to="'/site/'+site.id">
+        <q-item v-for="site in samples" :key="site.id" class="q-mb-sm" clickable v-ripple :to="'/?site='+site.id">
             <q-item-section avatar>
                 <q-avatar color="primary" text-color="white">
                     Q

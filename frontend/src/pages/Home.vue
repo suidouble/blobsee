@@ -1,13 +1,15 @@
 <template>
 
     <div>
-        <WalrusSitesSelector />
+        <WalrusSitesSelector v-if="!siteId" />
+        <WalrusSite :id="siteId" v-if="siteId" />
     </div>
 
 </template>
 
 <script>
 import WalrusSitesSelector from 'shared/components/Walrus/WalrusSitesSelector.vue';
+import WalrusSite from 'shared/components/Walrus/WalrusSite.vue';
 
 export default {
 	name: 'Home',
@@ -16,15 +18,15 @@ export default {
 	},
     components: {
         // WalrusSite,
+        WalrusSite,
         WalrusSitesSelector,
     },
 	data() {
 		return {
             chain: 'sui:testnet',
+            siteId: null,
 		}
 	},
-    watch: {
-    },
 	methods: {
         async switchTo(chainName) {
             this.chain = null;
@@ -34,12 +36,28 @@ export default {
         onSuiStatsAddress(suiStatsAddress) {
             this.suiStatsAddress = suiStatsAddress;
         },
+        checkRoute() {
+            if (this.$route.query.site) {
+                this.siteId = this.$route.query.site;
+            } else {
+                this.siteId = null;
+            }
+        },
 	},
+    watch: {
+        siteRoute() {
+            this.checkRoute();
+        }
+    },
     computed: {
+        siteRoute() {
+            return this.$route.query.site;
+        }
     },
     beforeMount() {
     },
     mounted() {
+        this.checkRoute();
     },
 }
 </script>

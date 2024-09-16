@@ -87,8 +87,10 @@ export default class AbstractCommon extends EventTarget {
 	}
 
     emit(eventTypeName, data = {}) {
+		console.error('emiting event', eventTypeName, data);
         const event = new CustomEvent(eventTypeName, { detail: data });
         this.dispatchEvent(event);
+		console.error('emiting event 2', eventTypeName, data);
     }
 
     async threadIsThere(threadId) {

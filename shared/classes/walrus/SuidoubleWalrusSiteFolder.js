@@ -93,9 +93,11 @@ export default class SuidoubleWalrusSiteFolder extends AbstractCommon {
             this._folders[folderName].pushResource(resource);
         } else {
             // resources belongs directly to this folder
-            this._resources[resource.path] = resource;
-            this.emit('resource', resource);
-            console.log(this.config);
+            if (!this._resources[resource.path]) {
+                this._resources[resource.path] = resource;
+                this.emit('resource', resource);
+            }
+            // console.log(this.config);
         }
     }
 

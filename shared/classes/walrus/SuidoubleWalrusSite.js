@@ -190,7 +190,7 @@ export default class SuidoubleWalrusSite extends AbstractCommon {
                 });
                 this._resources[path] = tempResource;
                 this._root.pushResource(tempResource);
-                this.emit('resource', tempResource);
+                // this.emit('resource', tempResource);
 
             }
         } else {
@@ -201,7 +201,7 @@ export default class SuidoubleWalrusSite extends AbstractCommon {
             });
             this._resources[path] = tempResource;
             this._root.pushResource(tempResource);
-            this.emit('resource', tempResource);
+            // this.emit('resource', tempResource);
 
         }
 
